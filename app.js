@@ -7,7 +7,7 @@ const mongoose = require('mongoose')
 const convertController = require('./controllers/convert')
 const homeController = require('./controllers/home')
 
-const port = 3000
+const port = 8000
 
 // connect mongoose with database
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/url', { useNewUrlParser: true })
