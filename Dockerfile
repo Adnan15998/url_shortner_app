@@ -12,4 +12,4 @@ COPY . .
 #container exposed network port number
 EXPOSE 8000
 #command to run within the container
-CMD ['node', 'app.js']
+CMD ['node','app.js']
