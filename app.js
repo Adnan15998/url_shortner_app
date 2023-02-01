@@ -7,10 +7,21 @@ const mongoose = require('mongoose')
 const convertController = require('./controllers/convert')
 const homeController = require('./controllers/home')
 
+const uri = "mongodb+srv://admin:test@143@cluster0.xfxbsbj.mongodb.net/?retryWrites=true&w=majority"; //m
 const port = 8000
 
+//m
+mongoose
+    .connect(uri,{ useNewUrlParser: true, useUnifiedTopology: true })
+    .then(() => console.log("Database Connected Successfully ... hurray "))
+    .catch(err => console.log(err));
+}
+//m
+
+
+
 // connect mongoose with database
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/url', { useNewUrlParser: true })
+// mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/url', { useNewUrlParser: true }) /p
 
 const db = mongoose.connection
 
